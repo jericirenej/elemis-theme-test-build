@@ -57,7 +57,7 @@ const Projects = ({ thumbnails, categories, onActive }) => {
               key={photo.id}
               id={photo.id}
               src={photo.newUrl}
-              alt={photo.category}></img>
+              alt={`Photo author: ${photo.author}`}></img>
           ))}
       </div>
     </div>
