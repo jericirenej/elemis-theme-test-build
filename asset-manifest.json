@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/jericirenej/elemis-theme-test-build/static/css/main.5e9c3b0d.chunk.css",
+    "main.js": "/jericirenej/elemis-theme-test-build/static/js/main.855ff09b.chunk.js",
+    "main.js.map": "/jericirenej/elemis-theme-test-build/static/js/main.855ff09b.chunk.js.map",
+    "runtime-main.js": "/jericirenej/elemis-theme-test-build/static/js/runtime-main.6186b15f.js",
+    "runtime-main.js.map": "/jericirenej/elemis-theme-test-build/static/js/runtime-main.6186b15f.js.map",
+    "static/js/2.21e98688.chunk.js": "/jericirenej/elemis-theme-test-build/static/js/2.21e98688.chunk.js",
+    "static/js/2.21e98688.chunk.js.map": "/jericirenej/elemis-theme-test-build/static/js/2.21e98688.chunk.js.map",
+    "index.html": "/jericirenej/elemis-theme-test-build/index.html",
+    "static/css/main.5e9c3b0d.chunk.css.map": "/jericirenej/elemis-theme-test-build/static/css/main.5e9c3b0d.chunk.css.map",
+    "static/js/2.21e98688.chunk.js.LICENSE.txt": "/jericirenej/elemis-theme-test-build/static/js/2.21e98688.chunk.js.LICENSE.txt",
+    "static/media/banner-mobile-cropped.ed91b5ca.jpg": "/jericirenej/elemis-theme-test-build/static/media/banner-mobile-cropped.ed91b5ca.jpg",
+    "static/media/banner.d5daa9b7.jpg": "/jericirenej/elemis-theme-test-build/static/media/banner.d5daa9b7.jpg",
+    "static/media/hegel.102e1d91.jpg": "/jericirenej/elemis-theme-test-build/static/media/hegel.102e1d91.jpg",
+    "static/media/kant.ad48181f.jpg": "/jericirenej/elemis-theme-test-build/static/media/kant.ad48181f.jpg",
+    "static/media/ourWorkplace-banner.1ff8bd12.jpg": "/jericirenej/elemis-theme-test-build/static/media/ourWorkplace-banner.1ff8bd12.jpg",
+    "static/media/plato.e6d8ed38.jpg": "/jericirenej/elemis-theme-test-build/static/media/plato.e6d8ed38.jpg",
+    "static/media/quotesBanner.3e750765.jpg": "/jericirenej/elemis-theme-test-build/static/media/quotesBanner.3e750765.jpg",
+    "static/media/shareBanner.55adecbc.jpg": "/jericirenej/elemis-theme-test-build/static/media/shareBanner.55adecbc.jpg",
+    "static/media/workTogether.75158b3d.jpg": "/jericirenej/elemis-theme-test-build/static/media/workTogether.75158b3d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6186b15f.js",
+    "static/js/2.21e98688.chunk.js",
+    "static/css/main.5e9c3b0d.chunk.css",
+    "static/js/main.855ff09b.chunk.js"
+  ]
+}
