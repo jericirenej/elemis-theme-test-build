@@ -3,12 +3,20 @@ import { TiLocationOutline } from "react-icons/ti";
 import { AiOutlinePhone } from "react-icons/ai";
 import { contactUs } from "../resources/data.js";
 import { useState } from "react";
+import Joi from "joi";
+import {
+  schemaName,
+  schemaEmail,
+  schemaMessage,
+  schemaComplete,
+} from "../resources/formValidation.js";
 
 const ContactUs = ({ handleSubmit }) => {
   const [message, setMessage] = useState({
     name: "",
     email: "",
     message: "",
+    validated: false,
   });
 
   const formInputHandle = (value, category) => {
@@ -16,15 +24,29 @@ const ContactUs = ({ handleSubmit }) => {
       ...prevState,
       [category]: value,
     }));
+    setMessage(prevState => ({ ...prevState, validated: validateInput(prevState) }));
+  };
+
+  const validateInput = message => {
+    const validation = schemaComplete.validate(
+      {
+        name: message.name,
+        email: message.email,
+        message: message.message,
+      },
+      { abortEarly: false }
+    );
+    return validation.error ? false : true;
   };
 
   const onSubmit = message => {
     try {
       handleSubmit(message);
       alert("Your message was sent. We'll get back to you shortly!");
-    }
-    catch(error) {
-      alert("Ooops, something went wrong while trying to send your message. Please try again later or send us an email!");
+    } catch (error) {
+      alert(
+        "Ooops, something went wrong while trying to send your message. Please try again later or send us an email!"
+      );
       console.error(error);
     }
     let keys = Object.keys(message);
@@ -70,6 +92,7 @@ const ContactUs = ({ handleSubmit }) => {
           onChange={input => formInputHandle(input.target.value, "message")}
           value={message.message}></textarea>
         <button
+          disabled={!message.validated}
           onClick={() => onSubmit(message)}
           id="contact-submit-input"
           type="button"

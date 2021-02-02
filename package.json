@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
     "bootstrap": "^4.6.0",
+    "joi": "^17.3.0",
     "jquery": "^3.5.1",
     "lorem-ipsum": "^2.0.3",
     "nanoid": "^3.1.20",
@@ -19,6 +20,7 @@
     "serve": "^11.3.2",
     "web-vitals": "^0.2.4"
   },
+  "type": "module",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",

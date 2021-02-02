@@ -714,6 +714,12 @@ CONTACT INPUTS
   grid-row: 3/4;
 }
 
+#contact-submit-input[disabled] {
+  background-color: rgb(200,200,200);
+  color: rgb(46, 46, 46);
+  cursor: not-allowed;
+}
+
 #about-us-inputs textarea {
   grid-column: 1/5;
   grid-row: 2;
