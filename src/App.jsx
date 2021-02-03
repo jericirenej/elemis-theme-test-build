@@ -34,6 +34,7 @@ class App extends Component {
 
   HandleSubmit = messageData => {
     const data = messageData;
+    delete data.validated;
     let updatedState = this.state.contactMessages;
     updatedState = updatedState.concat({
       ...data,

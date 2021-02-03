@@ -687,7 +687,7 @@ CONTACT INPUTS
   color: rgb(45, 45, 45);
   font-weight: 300;
   margin-top: 10px;
-  padding: 10px 0 15px;
+  padding: 10px 5px 15px;
   background: none;
   outline: none;
   border: none;
@@ -753,6 +753,14 @@ CONTACT INPUTS
   border: none;
 }
 
+#about-us-inputs input.validate-error, #about-us-inputs textarea.validate-error {
+  box-shadow: 0 0 0 1px rgba(224, 148, 148, 0.4);
+  border-radius: 5px;
+}
+/*#about-us-inputs input.validate-error:not(:focus) {
+  border: 2px solid rgba(224, 148, 148, 0.5);
+  border-radius: 5px;
+}*/
 /*
 FOOTER SET-UP
 */

@@ -4,12 +4,8 @@ import { AiOutlinePhone } from "react-icons/ai";
 import { contactUs } from "../resources/data.js";
 import { useState } from "react";
 import Joi from "joi";
-import {
-  schemaName,
-  schemaEmail,
-  schemaMessage,
-  schemaComplete,
-} from "../resources/formValidation.js";
+import schemaValidate from "../resources/formValidation.js";
+import ContactForm from "./contactForm.jsx";
 
 const ContactUs = ({ handleSubmit }) => {
   const [message, setMessage] = useState({
@@ -23,12 +19,12 @@ const ContactUs = ({ handleSubmit }) => {
     setMessage(prevState => ({
       ...prevState,
       [category]: value,
+      validated: validateInput({ ...prevState, [category]: value }),
     }));
-    setMessage(prevState => ({ ...prevState, validated: validateInput(prevState) }));
   };
 
   const validateInput = message => {
-    const validation = schemaComplete.validate(
+    const validation = schemaValidate.validate(
       {
         name: message.name,
         email: message.email,
@@ -37,6 +33,17 @@ const ContactUs = ({ handleSubmit }) => {
       { abortEarly: false }
     );
     return validation.error ? false : true;
+  };
+
+  const singleValidate = (parameter, value) => {
+    const validation = schemaValidate.validate(
+      { [parameter]: value },
+      { abortEarly: false }
+    );
+    const result = validation.error.details.filter(
+      item => item.context.key === parameter
+    );
+    return result.length ? result[0].message : null;
   };
 
   const onSubmit = message => {
@@ -73,33 +80,12 @@ const ContactUs = ({ handleSubmit }) => {
           <BsCardHeading className="about-icon mail" /> {contactUs.email}
         </p>
       </div>
-      <form id="about-us-inputs">
-        <input
-          type="text"
-          placeholder="Full name"
-          id="contact-name-input"
-          onChange={input => formInputHandle(input.target.value, "name")}
-          value={message.name}></input>
-        <input
-          type="email"
-          id="contact-email-input"
-          placeholder="Email address"
-          onChange={input => formInputHandle(input.target.value, "email")}
-          value={message.email}></input>
-        <textarea
-          id="contact-message-input"
-          placeholder="Your message"
-          onChange={input => formInputHandle(input.target.value, "message")}
-          value={message.message}></textarea>
-        <button
-          disabled={!message.validated}
-          onClick={() => onSubmit(message)}
-          id="contact-submit-input"
-          type="button"
-          className="submit blue-background">
-          Send Message
-        </button>
-      </form>
+      <ContactForm
+        message={message}
+        onSubmit={message => onSubmit(message)}
+        onSingleValidate={(parameter, value) => singleValidate(parameter, value)}
+        onInputHandle={(input, category) => formInputHandle(input, category)}
+      />
     </div>
   );
 };
