@@ -18,7 +18,8 @@ const schemaValidate = Joi.object().keys({
     .required(),
   message: Joi.string()
     .min(5)
-    .message("Your message should be at least 5 characters long."),
+    .message("Your message should be at least 5 characters long.")
+    .required()
 });
 
 export default schemaValidate;
