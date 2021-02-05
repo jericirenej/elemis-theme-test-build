@@ -1,5 +1,4 @@
 import { nanoid } from "nanoid";
-import "./App.css";
 import React, { Component, Fragment } from "react";
 import pictureLibrary from "./resources/picture_library.js";
 import { projectCategories } from "./resources/data.js";
