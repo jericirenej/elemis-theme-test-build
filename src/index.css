@@ -776,15 +776,20 @@ CONTACT INPUTS
   border-radius: 5px;
 }
 
+#about-us-inputs p {
+  height: 20px;
+  margin-bottom:0;
+}
+
 p.invalid-input {
   color: rgb(224, 148, 148);
-  margin-top: 5px;
+  transition: 0.2s ease;
 
 }
 
 p.valid-input {
   color: rgb(125, 177, 138);
-  margin-top: 5px;
+  transition: 0.2s ease;
 }
 
 /*

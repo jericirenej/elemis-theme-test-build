@@ -5,12 +5,12 @@ const schemaValidate = Joi.object().keys({
     .label("Name input field")
     .required()
     .trim()
-    .pattern(/(\b[^\d\W]+\b)(\s)(\b[^\d\W]+\b)/u, "full name")
+    .pattern(/^.*\b[^\d\W]+\b$/gmu, "full name")
     .min(5)
     .max(45)
     .messages({
       "string.pattern.name":
-        "Please, enter your name AND surname (no numbers allowed!)",
+        "Please, enter your name and surname (no numbers allowed).",
       "string.min":
         "Your full name should be at least 5 characters long, including spaces.",
       "string.max": "Full name is currently limited to 45 characters.",
@@ -22,20 +22,18 @@ const schemaValidate = Joi.object().keys({
     .trim()
     .email({ tlds: { allow: false } })
     .messages({
-      "any.required": "Email is reqired",
-      "email": "You must enter a valid email address in order to proceed.",
-      "string.empty": "Your message should be at least 5 characters long."
+      "any.required": "Email is reqired.",
+      "string.email": "You must enter a valid email address.",
+      "string.empty": "You must enter a valid email address.",
     }),
-  message: Joi.string()
-    .required()
-    .min(5)
-    .messages({
-      "string.min": "Your message should be at least 5 characters long",
-      "any.required": "Your message should be at least 5 characters long.",
-      "string.empty": "Your message should be at least 5 characters long."
-    }),
+  message: Joi.string().required().min(5).messages({
+    "string.min": "Message should be at least 5 characters long.",
+    "any.required": "Message should be at least 5 characters long.",
+    "string.empty": "Message should be at least 5 characters long.",
+  }),
 });
 
-const result = schemaValidate.validate({name:"nl a45sdal", email:"", message:""}, {abortEarly:false});
+const details = "details"
+const result = schemaValidate.validate({name:"nl a45sdal", email:"asdsa", message:""}, {abortEarly:false});
 //console.log(JSON.stringify(result, undefined, 2));
-console.log(result.error.details);
+console.log(result.error[details].length);

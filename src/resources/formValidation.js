@@ -5,12 +5,12 @@ const schemaValidate = Joi.object().keys({
     .label("Name input field")
     .required()
     .trim()
-    .pattern(/(\b[^\d\W]+\b)(\s)(\b[^\d\W]+\b)/u, "full name")
+    .pattern(/^(?=.*?\b[^\d\P{L}]+\b\s\b[^\d\P{L}]+\b)((?!\d).)*$/mu, "full name")
     .min(5)
     .max(45)
     .messages({
       "string.pattern.name":
-        "Please, enter your name AND surname (no numbers allowed!)",
+        "Please, enter your name and surname (no numbers allowed).",
       "string.min":
         "Your full name should be at least 5 characters long, including spaces.",
       "string.max": "Full name is currently limited to 45 characters.",
@@ -23,7 +23,7 @@ const schemaValidate = Joi.object().keys({
     .email({ tlds: { allow: false } })
     .messages({
       "any.required": "Email is reqired.",
-      "email": "You must enter a valid email address.",
+      "string.email": "You must enter a valid email address.",
       "string.empty": "You must enter a valid email address.",
     }),
   message: Joi.string().required().min(5).messages({
