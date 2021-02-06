@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/elemis-theme-test-build/static/css/main.e5460402.chunk.css",
-    "main.js": "/elemis-theme-test-build/static/js/main.233c77f1.chunk.js",
-    "main.js.map": "/elemis-theme-test-build/static/js/main.233c77f1.chunk.js.map",
+    "main.js": "/elemis-theme-test-build/static/js/main.7050b414.chunk.js",
+    "main.js.map": "/elemis-theme-test-build/static/js/main.7050b414.chunk.js.map",
     "runtime-main.js": "/elemis-theme-test-build/static/js/runtime-main.c692d52c.js",
     "runtime-main.js.map": "/elemis-theme-test-build/static/js/runtime-main.c692d52c.js.map",
     "static/js/2.db5cc494.chunk.js": "/elemis-theme-test-build/static/js/2.db5cc494.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.c692d52c.js",
     "static/js/2.db5cc494.chunk.js",
     "static/css/main.e5460402.chunk.css",
-    "static/js/main.233c77f1.chunk.js"
+    "static/js/main.7050b414.chunk.js"
   ]
 }
