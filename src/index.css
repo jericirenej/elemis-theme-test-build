@@ -33,11 +33,11 @@ button {
 
 h2 {
   font-weight: 400;
-  text-transform: uppercase;
   letter-spacing: -0.5px;
   font-size: 1.8rem;
   color: rgb(45, 45, 45);
   text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -198,7 +198,6 @@ BANNER SET-UP
   font-weight: 400;
   font-size: 3.1rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
   z-index: 2;
 }
 
@@ -306,7 +305,6 @@ SHARE BANNER SET-uP
 .share-banner > h2 {
   font-weight: 300;
   font-size: 2rem;
-  text-transform: uppercase;
   position: absolute;
   top: 35%;
   left: 50%;
@@ -414,11 +412,7 @@ CONTACT BANNER SET-uP
   font-weight: 300;
   font-size: 2rem;
   color: rgb(243, 243, 243);
-  text-transform: uppercase;
   position: absolute;
-  /*top: 35%;
-  right: 20%;
-  left: 23%;*/
   left: 50%;
   top: 32%;
   transform: translate(-50%, -32%);
@@ -702,7 +696,7 @@ CONTACT INPUTS
   grid-row: 1/2;
 }
 #about-us-inputs p {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
 }
 
 #about-us-inputs #contact-name-input-div input {
@@ -1192,7 +1186,6 @@ MEDIA QUERIES AND RESPONSIVE DESIGN
     border-bottom: 1.2px solid rgba(45, 45, 45, 0.5);
     font-weight: 400;
     font-size: 0.8rem;
-
     text-transform: uppercase;
   }
 

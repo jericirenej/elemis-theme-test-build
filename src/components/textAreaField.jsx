@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { BsCheck, BsX } from "react-icons/bs";
+import { BsCheck as ValidationOKIcon, BsX as ValidationErrorIcon } from "react-icons/bs";
 
 const TextField = ({
   message,
@@ -29,11 +29,11 @@ const TextField = ({
       {blurred > 0 ? (
         onSingleValidate(category, message[category]) ? (
           <p className="invalid-input">
-            <BsX className="icon" /> {onSingleValidate(category, message[category])}
+            <ValidationErrorIcon className="icon" /> {onSingleValidate(category, message[category])}
           </p>
         ) : (
           <p className="valid-input">
-            <BsCheck className="icon" />
+            <ValidationOKIcon className="icon" />
           </p>
         )
       ) : (

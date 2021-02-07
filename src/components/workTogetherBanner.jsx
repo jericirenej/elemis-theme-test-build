@@ -1,4 +1,3 @@
-import { mailAddress } from "../resources/data";
 import workTogether from "../resources/workTogether.jpg";
 
 const ContactBanner = () => {

@@ -1,6 +1,6 @@
-import { BsCardHeading } from "react-icons/bs";
-import { TiLocationOutline } from "react-icons/ti";
-import { AiOutlinePhone } from "react-icons/ai";
+import { BsCardHeading as EmailIcon} from "react-icons/bs";
+import { TiLocationOutline as LocationIcon } from "react-icons/ti";
+import { AiOutlinePhone as PhoneIcon } from "react-icons/ai";
 import { contactUs } from "../resources/data.js";
 import { useState } from "react";
 import Joi from "joi";
@@ -69,15 +69,15 @@ const ContactUs = ({ handleSubmit }) => {
       <p>{contactUs.content}</p>
       <div id="contact-information">
         <p>
-          <TiLocationOutline className="about-icon location" />
+          <LocationIcon className="about-icon location" />
           {contactUs.address}
         </p>
         <p>
-          <AiOutlinePhone className="about-icon phone" />
+          <PhoneIcon className="about-icon phone" />
           {contactUs.phone}
         </p>
         <p>
-          <BsCardHeading className="about-icon mail" /> {contactUs.email}
+          <EmailIcon className="about-icon mail" /> {contactUs.email}
         </p>
       </div>
       <ContactForm
