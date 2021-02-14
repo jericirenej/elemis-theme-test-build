@@ -39,7 +39,7 @@ const ContactForm = props => {
         onClick={() => onSubmit(message)}
         id="contact-submit-input"
         type="button"
-        className="submit blue-background">
+        className={`submit ${message.validated && "button-animate"}`}>
         Send Message
       </button>
     </form>
