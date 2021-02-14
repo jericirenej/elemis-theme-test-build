@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/elemis-theme-test-build/static/css/main.5fa3cbfd.chunk.css",
-    "main.js": "/elemis-theme-test-build/static/js/main.4f16eaeb.chunk.js",
-    "main.js.map": "/elemis-theme-test-build/static/js/main.4f16eaeb.chunk.js.map",
+    "main.css": "/elemis-theme-test-build/static/css/main.04f2c923.chunk.css",
+    "main.js": "/elemis-theme-test-build/static/js/main.44aeeccc.chunk.js",
+    "main.js.map": "/elemis-theme-test-build/static/js/main.44aeeccc.chunk.js.map",
     "runtime-main.js": "/elemis-theme-test-build/static/js/runtime-main.c692d52c.js",
     "runtime-main.js.map": "/elemis-theme-test-build/static/js/runtime-main.c692d52c.js.map",
     "static/js/2.db5cc494.chunk.js": "/elemis-theme-test-build/static/js/2.db5cc494.chunk.js",
     "static/js/2.db5cc494.chunk.js.map": "/elemis-theme-test-build/static/js/2.db5cc494.chunk.js.map",
     "index.html": "/elemis-theme-test-build/index.html",
-    "static/css/main.5fa3cbfd.chunk.css.map": "/elemis-theme-test-build/static/css/main.5fa3cbfd.chunk.css.map",
+    "static/css/main.04f2c923.chunk.css.map": "/elemis-theme-test-build/static/css/main.04f2c923.chunk.css.map",
     "static/js/2.db5cc494.chunk.js.LICENSE.txt": "/elemis-theme-test-build/static/js/2.db5cc494.chunk.js.LICENSE.txt",
     "static/media/banner-mobile-cropped.ed91b5ca.jpg": "/elemis-theme-test-build/static/media/banner-mobile-cropped.ed91b5ca.jpg",
     "static/media/banner.d5daa9b7.jpg": "/elemis-theme-test-build/static/media/banner.d5daa9b7.jpg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.c692d52c.js",
     "static/js/2.db5cc494.chunk.js",
-    "static/css/main.5fa3cbfd.chunk.css",
-    "static/js/main.4f16eaeb.chunk.js"
+    "static/css/main.04f2c923.chunk.css",
+    "static/js/main.44aeeccc.chunk.js"
   ]
 }
