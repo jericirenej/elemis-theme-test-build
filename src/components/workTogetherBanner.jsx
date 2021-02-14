@@ -7,7 +7,7 @@ const ContactBanner = () => {
       <h2>
         We create unique <span className="blue">&</span> gorgeous things.
       </h2>
-      <a href="#contact-us">Let's work together</a>
+      <a href="#contact-us" className="button-animate">Let's work together</a>
     </div>
   );
 };

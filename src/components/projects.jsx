@@ -36,7 +36,7 @@ const Projects = ({ thumbnails, categories, onActive }) => {
             <li
               key={category.value}
               active={category.active}
-              className="category-filter"
+              className={`"category-filter" ${viewport === "small" && "button-animate"}`}
               onClick={() => onActive(category.value)}>
               {category.value}
             </li>

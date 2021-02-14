@@ -20,7 +20,7 @@ const Services = () => {
         </div>
       </div>
       <div id="projectButton">
-        <a href="#projects" className="projectLink">
+        <a href="#projects" className="projectLink button-animate">
           See our projects
         </a>
       </div>

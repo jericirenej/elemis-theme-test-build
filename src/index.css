@@ -56,8 +56,8 @@ li {
   list-style: none;
 }
 
-.icon{
- transform: translateY(15%);
+.icon {
+  transform: translateY(15%);
 }
 /* width */
 ::-webkit-scrollbar {
@@ -86,6 +86,47 @@ li {
 .blue-background {
   background-color: rgb(84, 156, 196);
 }
+
+/*
+Hover links animation 
+*/
+.button-animate {
+  position:relative;
+  overflow: hidden;
+}
+.button-animate::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  left: -15%;
+  top: 0;
+  height: 135%;
+  background: rgba(45, 45, 45, 0.6);
+  transform: skew(-45deg);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.button-animate:hover::after {
+  content: "";
+  width: 170%;
+  transition: 0.5s all;
+  z-index: -1;
+}
+
+
+.button-animate:hover {
+  color: rgb(104, 186, 230) !important;
+  text-shadow: 0 0 2px rgb(92, 170, 212)!important;
+  transition: 0.3s;
+}
+
+.button-animate[active="true"] {
+  background: rgba(45, 45, 45, 0.7);
+  color: rgb(92, 170, 212) !important;
+}
+
 /*
 HEADER SET-UP (Logo and navbar) 
 */
@@ -150,7 +191,7 @@ header nav li:first-child {
 }
 
 li a:hover {
-  color: rgb(92, 170, 212);
+  color: rgb(104, 186, 230);
   transition: 0.2s ease-out;
 }
 
@@ -267,23 +308,18 @@ SERVICES SET-UP
 }
 #projectButton .projectLink {
   display: inline-block;
+  overflow: hidden;
   text-align: center;
   text-decoration: none;
   font-weight: 300;
   font-size: 0.9rem;
   text-transform: uppercase;
-  color: rgb(45, 45, 45);
   width: 12%;
   margin-left: 44%;
   margin-right: 43%;
   margin-bottom: 95px;
   padding: 20px 18px 18px;
   border: 1.2px solid rgba(45, 45, 45, 0.5);
-}
-
-#projectButton .projectLink:hover {
-  background: rgba(45, 45, 45, 0.7);
-  color: rgb(92, 170, 212);
 }
 
 /*
@@ -332,9 +368,7 @@ PROJECT LIST SET-UP
 #projects ul {
   margin-top: 50px;
   margin-bottom: 24px;
-  /*margin-right: 18%;
-margin-left: 18%;*/
-  display: flex;
+display: flex;
   justify-content: center;
 }
 
@@ -345,15 +379,6 @@ margin-left: 18%;*/
   justify-content: center;
   flex: 0 1 auto;
   flex-flow: wrap;
-}
-
-#projects ul li[active="true"] {
-  color: rgb(84, 156, 196);
-  transition: 0.2s ease-out;
-}
-#projects ul li[active="false"] {
-  color: inherit;
-  transition: 0.2s ease-out;
 }
 
 li.category-filter {
@@ -369,7 +394,6 @@ li.separator {
   width: 100%;
   opacity: 1;
   display: grid;
-
   max-height: 700px;
   min-height: 400px;
   grid-template-columns: repeat(4, 1fr);
@@ -772,13 +796,12 @@ CONTACT INPUTS
 
 #about-us-inputs p {
   height: 20px;
-  margin-bottom:0;
+  margin-bottom: 0;
 }
 
 p.invalid-input {
   color: rgb(224, 148, 148);
   transition: 0.2s ease;
-
 }
 
 p.valid-input {
@@ -1189,16 +1212,7 @@ MEDIA QUERIES AND RESPONSIVE DESIGN
     text-transform: uppercase;
   }
 
-  #projects ul li:hover {
-    background: rgba(45, 45, 45, 0.7);
-    color: rgb(92, 170, 212);
-  }
-
-  #projects ul li[active="true"] {
-    background: rgba(45, 45, 45, 0.7);
-    color: rgb(92, 170, 212);
-  }
-
+ 
   #projects ul li:last-child {
     border-bottom: none;
   }
