@@ -17,3 +17,6 @@ The page was built using:
  - [Lorem Picsum](https://picsum.photos/) for fetching the majority of the picutre elements
  - [Lorem Ipsum](https://www.npmjs.com/package/lorem-ipsum) library for generating random text
  - [Joi](https://joi.dev/) library for input validation for the contact form
+
+## See it live
+The live build of the webpage can be accessed [here](https://jericirenej.github.io/elemis-theme-test-build/). Also check out the[ gh-pages](https://github.com/jericirenej/elemis-theme-test-build/tree/gh-pages) branch for the build fiels of the live version.
